@@ -1,7 +1,8 @@
 Drop table if exists beers;
 Drop table if exists branches;
 Drop table if exists cars;
-
+Drop table if exists games;
+Drop table if exists movies;
 
 
 
@@ -48,3 +49,35 @@ INSERT INTO cars (name, type, manufactured) VALUES
 ('coronet', 'dodge', '1968'),
 ('cj-7', 'jeep', '1985'),
 ('gto', 'pontiac', '1965');
+
+CREATE table games (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    type VARCHAR NOT NULL,
+    year VARCHAR NOT NULL
+);
+
+
+INSERT INTO games (name, type, year) VALUES 
+('Halo', 'Action', '2000'),
+('Gears Of War', 'Action', '2006'),
+('Hit Man', 'Action', '2016'),
+('BorderLands', 'Action', '2015');
+
+
+CREATE table movies (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    type VARCHAR NOT NULL,
+    year VARCHAR NOT NULL
+);
+
+
+INSERT INTO movies (name, type, year) VALUES 
+('war of the worlds', 'sci-fi', '2005'),
+('oblivion', 'Action', '2013'),
+('elysium', 'Action', '2013'),
+('chappie', 'crime', '2015');
+
+
+
