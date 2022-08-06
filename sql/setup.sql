@@ -1,5 +1,6 @@
 Drop table if exists beers;
 Drop table if exists branches;
+Drop table if exists cars;
 
 
 
@@ -32,3 +33,18 @@ INSERT INTO branches (name, age, dob) VALUES
 ('THE UNITED STATES MARINE CORPS', '246', 'NOV, 10, 1775'),
 ('THE UNITED STATES NAVY', '243', 'COT, 13, 1775'),
 ('THE UNITED STATES CHAIR FORCE', '74', 'SEP, 18, 1947');
+
+
+CREATE table cars (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    type VARCHAR NOT NULL,
+    manufactured VARCHAR NOT NULL
+);
+
+
+INSERT INTO cars (name, type, manufactured) VALUES 
+('thunder bird', 'ford', '1957'),
+('coronet', 'dodge', '1968'),
+('cj-7', 'jeep', '1985'),
+('gto', 'pontiac', '1965');
