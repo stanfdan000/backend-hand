@@ -41,8 +41,15 @@ describe('cars routes', () => {
     ]);
   });
 
-
-
+  it.skip('/cars/:id should return cars details', async () => {
+    const res = await request(app).get('/cars/1');
+    expect(res.body).toEqual({
+      id: '1',
+      name: 'thunder bird',
+      type: 'ford',
+      manufactured: '1957',
+    });
+  });
 
 
 
