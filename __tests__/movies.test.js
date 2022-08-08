@@ -42,8 +42,17 @@ describe('movie routes', () => {
   });
 
 
+  it.skip('/movies/:id should return movies details', async () => {
+    const res = await request(app).get('/movies/1');
+    expect(res.body).toEqual({
+      id: '1',
+      name: 'war of the worlds',
+      type: 'sci-fi',
+      year: '2005',
+    });
+  });
 
-
+  
 
 
 });

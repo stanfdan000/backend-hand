@@ -41,6 +41,15 @@ describe('games routes', () => {
     ]);
   });
 
+  it.skip('/games/:id should return cars details', async () => {
+    const res = await request(app).get('/games/1');
+    expect(res.body).toEqual({
+      id: '1',
+      name: 'Halo',
+      type: 'Action',
+      year: '2000',
+    });
+  });
 
 
 

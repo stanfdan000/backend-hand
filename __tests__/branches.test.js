@@ -55,6 +55,20 @@ describe('test routes for branches table', () => {
   });
 
 
+  it('POST /branches should create a new branches', async () => {
+    const newBranch = {
+      name: 'THE UNITED STATES SPACE FORCE',
+      age: '2',
+      dob: 'SEP, 18, 2021',
+    };
+    const resp = await request(app).post('/branches').send(newBranch);
+    
+    expect(resp.body.name).toBe('THE UNITED STATES SPACE FORCE');
+    expect(resp.body.age).toBe('2');
+    expect(resp.body.dob).toBe('SEP, 18, 2021');
+    
+  });
+    
 
 
 

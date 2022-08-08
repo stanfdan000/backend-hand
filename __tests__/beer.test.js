@@ -63,6 +63,23 @@ describe('beer routes', () => {
   });
 
 
+  it.skip('POST /beers should create a new beer', async () => {
+    const newBeer = {
+      name: 'lean',
+      type: 'purple drank',
+      manufactured: '1995',
+      calories: '50000',
+      oz: '25',
+    };
+    const resp = await request(app).post('/beers').send(newBeer);
+    
+    expect(resp.body.name).toBe('lean');
+    expect(resp.body.type).toBe('purple drank');
+    expect(resp.body.manufactured).toBe('1995');
+    expect(resp.body.calories).toBe('50000');
+    expect(resp.body.oz).toBe('25');
+  });
+    
 
 
  
