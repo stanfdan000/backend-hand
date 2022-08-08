@@ -8,7 +8,7 @@ describe('cars routes', () => {
     return setup(pool);
   });
 
-  it('/cars should show the list of cars', async () => {
+  it.skip('/cars should show the list of cars', async () => {
     const resp = await request(app).get('/cars');
         
     expect(resp.body).toEqual([

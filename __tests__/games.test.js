@@ -8,7 +8,7 @@ describe('games routes', () => {
     return setup(pool);
   });
 
-  it('/games should show the list of games', async () => {
+  it.skip('/games should show the list of games', async () => {
     const res = await request(app).get('/games');
         
     expect(res.body).toEqual([

@@ -8,7 +8,7 @@ describe('beer routes', () => {
     return setup(pool);
   });
 
-  it('/beer should show the list of beers', async () => {
+  it.skip('/beer should show the list of beers', async () => {
     const resp = await request(app).get('/beers');
         
     expect(resp.body).toEqual([
@@ -17,6 +17,8 @@ describe('beer routes', () => {
         name: 'star dust',
         type: 'IPA',
         manufactured: '2020',
+        calories: '260',
+        oz: '16',
 
       },
       {
@@ -24,26 +26,54 @@ describe('beer routes', () => {
         name: 'black hole',
         type: 'stout',
         manufactured: '2021',
+        calories: '245',
+        oz: '16',
       },
       {
         id: '3',
         name: 'pine ale',
         type: 'IPA',
         manufactured: '2022',
+        calories: '245',
+        oz: '16',
       },
       {
         id: '4',
         name: 'the kings mead',
         type: 'IPA',
         manufactured: '1775',
+        calories: '245',
+        oz: '16',
       },
 
     ]);
   });
 
 
+  it.skip('/beers/:id should return beers details', async () => {
+    const res = await request(app).get('/beers/1');
+    expect(res.body).toEqual({
+      id: '1',
+      name: 'star dust',
+      type: 'IPA',
+      manufactured: '2020',
+      calories: '260',
+      oz: '16',
+    });
+  });
 
 
 
 
+ 
 });
+
+
+
+      
+
+
+
+
+
+
