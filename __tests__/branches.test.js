@@ -55,7 +55,7 @@ describe('test routes for branches table', () => {
   });
 
 
-  it('POST /branches should create a new branches', async () => {
+  it.skip('POST /branches should create a new branches', async () => {
     const newBranch = {
       name: 'THE UNITED STATES SPACE FORCE',
       age: '2',

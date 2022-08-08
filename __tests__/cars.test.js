@@ -53,4 +53,23 @@ describe('cars routes', () => {
 
 
 
+
+  it('POST /cars should create a new car', async () => {
+    const newCars = {
+      name: 'noah ark',
+      type: 'cargo',
+      manufactured: 'SEP, 18, 305BC',
+    };
+    const resp = await request(app).post('/cars').send(newCars);
+    console.log(resp.body);
+    expect(resp.body.name).toBe('noah ark');
+    expect(resp.body.type).toBe('cargo');
+    expect(resp.body.manufactured).toBe('SEP, 18, 305BC');
+    
+  });
+
+
+
+
+
 });
