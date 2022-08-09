@@ -54,7 +54,7 @@ describe('cars routes', () => {
 
 
 
-  it('POST /cars should create a new car', async () => {
+  it.skip('POST /cars should create a new car', async () => {
     const newCars = {
       name: 'noah ark',
       type: 'cargo',
@@ -65,8 +65,8 @@ describe('cars routes', () => {
     expect(resp.body.name).toBe('noah ark');
     expect(resp.body.type).toBe('cargo');
     expect(resp.body.manufactured).toBe('SEP, 18, 305BC');
-    
   });
+    
 
 
 
