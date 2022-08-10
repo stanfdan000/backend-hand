@@ -8,7 +8,7 @@ describe('cars routes', () => {
     return setup(pool);
   });
 
-  it.skip('/cars should show the list of cars', async () => {
+  it('/cars should show the list of cars', async () => {
     const resp = await request(app).get('/cars');
         
     expect(resp.body).toEqual([
@@ -41,7 +41,7 @@ describe('cars routes', () => {
     ]);
   });
 
-  it.skip('/cars/:id should return cars details', async () => {
+  it('/cars/:id should return cars details', async () => {
     const res = await request(app).get('/cars/1');
     expect(res.body).toEqual({
       id: '1',
@@ -54,7 +54,7 @@ describe('cars routes', () => {
 
 
 
-  it.skip('POST /cars should create a new car', async () => {
+  it('POST /cars should create a new car', async () => {
     const newCars = {
       name: 'noah ark',
       type: 'cargo',

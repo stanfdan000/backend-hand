@@ -8,7 +8,7 @@ describe('movie routes', () => {
     return setup(pool);
   });
 
-  it.skip('/movies should show the list of movies', async () => {
+  it('/movies should show the list of movies', async () => {
     const res = await request(app).get('/movies');
         
     expect(res.body).toEqual([
@@ -42,7 +42,7 @@ describe('movie routes', () => {
   });
 
 
-  it.skip('/movies/:id should return movies details', async () => {
+  it('/movies/:id should return movies details', async () => {
     const res = await request(app).get('/movies/1');
     expect(res.body).toEqual({
       id: '1',

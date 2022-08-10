@@ -11,7 +11,7 @@ describe('test routes for branches table', () => {
 
 
 
-  it.skip('/branches should display a list of service branches', async() => {
+  it('/branches should display a list of service branches', async() => {
     const res = await request(app).get('/branches');
     expect(res.body).toEqual([
       {
@@ -44,7 +44,7 @@ describe('test routes for branches table', () => {
 
 
 
-  it.skip('/branches/:id should return branches details', async () => {
+  it('/branches/:id should return branches details', async () => {
     const res = await request(app).get('/branches/1');
     expect(res.body).toEqual({
       id: '1',
@@ -55,7 +55,7 @@ describe('test routes for branches table', () => {
   });
 
 
-  it.skip('POST /branches should create a new branches', async () => {
+  it('POST /branches should create a new branches', async () => {
     const newBranch = {
       name: 'THE UNITED STATES SPACE FORCE',
       age: '2',
